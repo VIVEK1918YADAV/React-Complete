@@ -17,12 +17,14 @@
  * 
  * 
  */
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 const parent =  React.createElement("div",  {id: "parent" }, [// (react element)parent is not a html or any tag it is an object
     
     React.createElement("div",{id:"child"},
-        [React.createElement("h1", {}, "I'm an h1 tag"),
-        React.createElement("h2", {}, "I'm an h2 tag"),
+        [React.createElement("h1", {}, "This is King"),
+        React.createElement("h2", {}, "This is Vivek"),
     ]), //3rd argument
 
     React.createElement("div",{id:"child"},
