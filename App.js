@@ -1,48 +1,30 @@
-/**
- * create nested html structure inside your react application  
- * 
- * <div id ="parent">
- *    <div id = "child">
- *       <h1> I am H1 tag </h1>
- *       <h2> I am H2 tag </h2>
- *    </div>
- * <div id="child2">
- * <h1> I am H1 tag </h1>
- * <h2> I am H2 tag </h2>
- * </div>
- * </div>
- * 
- * 
- * 
- * 
- * 
- */
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent =  React.createElement("div",  {id: "parent" }, [// (react element)parent is not a html or any tag it is an object
-    
-    React.createElement("div",{id:"child"},
-        [React.createElement("h1", {}, "This is King"),
-        React.createElement("h2", {}, "This is Vivek"),
-    ]), //3rd argument
+// React.createElement => Object => HTMLELEMENT(render )
+const heading =  React.createElement(
+    "h1",
+    {id: "heading"},
+    "Namaste Dunia"
+);
 
-    React.createElement("div",{id:"child"},
-        [React.createElement("h1", {}, "I'm an h1 tag"),
-        React.createElement("h2", {}, "I'm an h2 tag"),
-    ]),
-]);
+console.log(heading);
 
-//JSX  
+//JSX- HTML like Syntax
+//JSX(transpiled before it reaches the JS)-PARCEL - Bable
+//JSX => Babel transpiles it to React.createElement => ReactElement.JS Object => HTMLElement(render)
+//ReactElement
+const jsxHeading = (
+<h1 className="head" tabIndex="5">
+Namaste React using JSX
+</h1>
+);
 
-// const heading =  React.createElement(
-//     "h1", 
-//     {id: "heading", xyz: "abc"},
-//      "Hello World from React!"
-//      );
-
-console.log(parent);//object
+console.log(jsxHeading);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(jsxHeading);
+
+//React Functional Component
